@@ -1,0 +1,36 @@
+function solution(x) {
+    let answer = true;
+    
+    let tempArr = []
+    let num = String(x)
+    
+    for(let i = 0; i < num.length; i++) {
+        tempArr.push(Number(num[i]));
+    }
+    
+    let sum = tempArr.reduce((a, b) => (a + b))
+    
+    if (!(x % sum === 0)) {
+        answer = false;
+    }
+    
+    return answer;
+}
+
+// 다른 풀이
+function solution(x) {
+    let answer = true;
+    
+    let arr = String(x).split('');
+    
+    let sum = 0
+    for(let i = 0; i < arr.length; i++) {
+        sum += Number(arr[i]);
+    }
+
+    if (!(x % sum === 0)) {
+        answer = false;
+    }
+    
+    return answer;
+}
