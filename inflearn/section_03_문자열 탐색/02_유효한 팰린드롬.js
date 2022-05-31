@@ -4,7 +4,7 @@ function solution(s) {
   let str1 = "";
   let str2 = "";
 
-  Array.from(s).forEach((str) => {
+  s.split("").forEach((str) => {
     if (alphabet.includes(str.toLowerCase())) str1 += str.toLowerCase();
   });
 
@@ -13,9 +13,6 @@ function solution(s) {
     .forEach((str) => {
       if (alphabet.includes(str.toLowerCase())) str2 += str.toLowerCase();
     });
-
-  console.log(str1);
-  console.log(str2);
 
   if (str1 !== str2) answer = "NO";
 
