@@ -1,6 +1,5 @@
 function solution(my_string, is_suffix) {
-    const reversedArr = [...my_string].reverse();
-    const arr = [reversedArr[0]];
+    const arr = [];
 
     for(let i = 0; i < my_string.length; i++) {
         arr.push(my_string.slice(i));
