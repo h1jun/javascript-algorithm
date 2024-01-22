@@ -1,5 +1,5 @@
 function solution(myString, pat) {
-    let res = 0;
+    let res = '';
     for(const str of myString) {
         if(str === 'A') res += 'B'
         else res += 'A'
