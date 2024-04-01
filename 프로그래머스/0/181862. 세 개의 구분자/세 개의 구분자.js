@@ -1,16 +1,8 @@
 function solution(myStr) {
-    const arr = [...myStr];
-    for(let i = 0; i < myStr.length; i++) {
-        if(arr[i].includes('a')) arr[i] = '*';
-        if(arr[i].includes('b')) arr[i] = '*';
-        if(arr[i].includes('c')) arr[i] = '*';
-    }
-    const tempArr  = arr.join('').split('*');
-    const res = [];
-    for(let str of tempArr) {
-       
-        if(str !== '') res.push(str);
-    }
-    if(!res.length) res.push('EMPTY')
+    const temp1 = myStr.split("a").join('b');
+    const temp2 = temp1.split("b").join('c');
+    const temp3 = temp2.split("c");
+    const res = temp3.filter(el => el);
+    if(!res.length) res.push('EMPTY');
     return res;
 }
