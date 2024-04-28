@@ -14,17 +14,13 @@ function solution(polynomial) {
     });
 
     let result = '';
-    if (xCoefficient > 0) {
+    if (xCoefficient !== 0) {
         if (xCoefficient === 1) result += 'x';
         else result += `${xCoefficient}x`;
     }
     if (constant !== 0) {
-        if (xCoefficient !== 0) {
-            if (constant > 0) result += ` + ${constant}`;
-            else result += ` - ${-constant}`;
-        } else {
-            result += constant;
-        }
+        if (result !== '' && constant > 0) result += ` + ${constant}`;
+        else result += constant; 
     }
-    return result;
+    return result
 }
